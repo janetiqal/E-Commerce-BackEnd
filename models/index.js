@@ -38,7 +38,7 @@ Tag.belongsToMany(Product, {
   //  foreignKey: 'tag_id',
    onDelete: "SET NULL",
    onUpdate: "CASCADE"
-},//alias
+},//alias, rename to be tag_of_products(multiple products but one tag)
   as: 'tags_of_products'
 })
 
