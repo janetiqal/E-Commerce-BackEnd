@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-
+const capitalLetter = require('../helpers/functions')
 const sequelize = require('../config/connection.js');
 
 class Category extends Model {}
@@ -18,6 +18,16 @@ Category.init(
     }
   },
   {
+    hooks:{
+      beforeCreate: async (newCategory)=>{
+        newCategory.category_name = await capitalLetter(newCategory.category_name)
+        return;  
+      },
+      beforeUpdate: async (updateCategory)=>{
+        updateCategory.category_name = await capitalLetter(updateCategory.category_name)
+        return;  
+      },
+  },
     sequelize,
     timestamps: false,
     freezeTableName: true,

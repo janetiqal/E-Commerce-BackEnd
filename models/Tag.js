@@ -17,6 +17,17 @@ Tag.init(
     }
   },
   {
+    hooks:{
+      //data in the tag_name column seem to be all lowercase, so if database is updated or added to, want it to be consistent w seed data
+      beforeCreate: async (newTagName)=>{
+        newTagName.tag_name = await newTagName.tag_name.toLowerCase();
+        return newTagName;
+      },
+      beforeUpdate: async (updateTagName)=>{
+        updateTagName.tag_name = await updateTagName.tag_name.toLowerCase();
+        return updateTagName;
+      },
+  },
     sequelize,
     timestamps: false,
     freezeTableName: true,

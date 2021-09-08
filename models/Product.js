@@ -2,7 +2,7 @@
 const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
 const sequelize = require('../config/connection');
-
+const capitalLetter = require('../helpers/functions')
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Product extends Model {}
 
@@ -43,6 +43,17 @@ Product.init(
     }
   },
   {
+    //product names are capitlized at each word, want to stay consistent w seed data
+    hooks:{
+      beforeCreate: async (newProductName)=>{
+        newProductName.product_name = await capitalLetter(newProductName.product_name)
+        return
+      },
+      beforeUpdate: async (updateProductName)=>{
+        updateProductName.product_name = await capitalLetter(updateProductName.product_name)
+        return
+      }
+    },
     sequelize,
     timestamps: false,
     freezeTableName: true,
