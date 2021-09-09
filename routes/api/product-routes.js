@@ -7,7 +7,7 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 router.get('/', async (req, res) => {
  try{
    const productData= await Product.findAll({
-     include:[{model: Tag, through: ProductTag, as: 'tags_for_product'}]
+     include:[Category,{model: Tag, through: ProductTag, as: 'tags_for_product'}]
    })
    res.status(200).json(productData)
  }catch(err){
@@ -22,7 +22,7 @@ router.get('/:id', async (req, res) => {
       where:{
         id: req.params.id
       },
-      include:[{model: Tag, through: ProductTag, as: 'tags_for_product'}]
+      include:[Category,{model: Tag, through: ProductTag, as: 'tags_for_product'}]
     })
     if(!singleProduct){
       res.status(404).json({message:"Can not find product with inputted ID"})
@@ -69,7 +69,7 @@ router.post('/', (req, res) => {
 
 // update product
 router.put('/:id', (req, res) => {
-    /* req.body should look like this...
+    /* req.body include what needs to be updated
     {
       product_name: "Basketball",
       price: 200.00,
@@ -126,7 +126,7 @@ router.delete('/:id', async (req, res) => {
       }
     })
     if(!deleteProduct){
-      res.status(400).json({message:"Can not find product by that ID to delete"})
+      res.status(404).json({message:"Can not find product by that ID to delete"})
     }
     res.status(200).json(deleteProduct)
   } catch(err){

@@ -37,9 +37,10 @@ router.post('/', async (req, res) => {
   });
   res.status(200).json(newTag)
   } catch(err){
-    res.status(500).json(err)
+    res.status(400).json(err)
   }
 });
+
 // update a tag's name by its `id` value
 router.put('/:id', async (req, res) => {
  try{
@@ -54,7 +55,7 @@ router.put('/:id', async (req, res) => {
   }
   res.status(200).json(updateTagName)
 } catch(err){
-  res.status(500).json(err)
+  res.status(400).json(err)
 }
 });
 
