@@ -27,7 +27,7 @@ Product.belongsToMany(Tag,{
     onDelete: "SET NULL",
     onUpdate: "CASCADE"
   },//alias
-    as: 'products_tagged'
+    as: 'tags_for_product'
 })
 
 // Tags belongToMany Products (through ProductTag aka the junction model)
@@ -38,8 +38,8 @@ Tag.belongsToMany(Product, {
   //  foreignKey: 'tag_id',
    onDelete: "SET NULL",
    onUpdate: "CASCADE"
-},//alias, rename to be tag_of_products(multiple products but one tag)
-  as: 'tags_of_products'
+},//alias
+  as: 'products_by_tag'
 })
 
 module.exports = {

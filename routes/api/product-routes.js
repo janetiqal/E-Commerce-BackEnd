@@ -7,7 +7,7 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 router.get('/', async (req, res) => {
  try{
    const productData= await Product.findAll({
-     include:[{model: Tag, through: ProductTag, as: 'products_tagged'}]
+     include:[{model: Tag, through: ProductTag, as: 'tags_for_product'}]
    })
    res.status(200).json(productData)
  }catch(err){
@@ -22,7 +22,7 @@ router.get('/:id', async (req, res) => {
       where:{
         id: req.params.id
       },
-      include:[{model: Tag, through: ProductTag, as: 'products_tagged'}]
+      include:[{model: Tag, through: ProductTag, as: 'tags_for_product'}]
     })
     if(!singleProduct){
       res.status(404).json({message:"Can not find product with inputted ID"})
