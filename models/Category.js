@@ -16,7 +16,7 @@ Category.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate:{
-        is:/[a-z ]/
+        is:/[a-z]/
       },
     }
   },
