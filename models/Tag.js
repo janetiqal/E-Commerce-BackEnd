@@ -13,8 +13,10 @@ Tag.init(
       autoIncrement: true
     },
     tag_name:{
-      type: DataTypes.STRING
-      //ADD Validation
+      type: DataTypes.STRING,
+      validate:{
+        is:/[a-zA-Z _]/
+      },
     }
   },
   {
