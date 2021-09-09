@@ -57,7 +57,7 @@ router.put('/:id', async (req, res) => {
   }
   res.status(200).json(updateCategoryData)
  } catch (err){
-   res.status(500).json(err)
+   res.status(400).json(err)
  }
 });
 
@@ -74,7 +74,7 @@ router.delete('/:id', async (req, res) => {
     }
     res.status(200).json(deleteCategoryData)
   } catch(err){
-    res.status(500).json(err)
+    res.status(400).json(err)
   }
 });
 
