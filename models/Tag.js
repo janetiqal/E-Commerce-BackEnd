@@ -15,7 +15,7 @@ Tag.init(
     tag_name:{
       type: DataTypes.STRING,
       validate:{
-        is:/[a-z]/
+        is:/[a-zA-Z]/
       },
     }
   },
