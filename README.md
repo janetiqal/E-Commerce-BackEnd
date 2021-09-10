@@ -32,10 +32,10 @@ SO THAT my company can compete with other e-commerce companies
   [Demo Video](https://drive.google.com/file/d/159qgTo5idf37QCPdawoTFo2DA643cfsn/view?usp=sharing) </br>
   [Demo Video Part Two](https://drive.google.com/file/d/1H_KQ0XdqAT6QMpRwfq9A3DYde8DDK-K8/view?usp=sharing)
 ## Sample-GIF
-<img src="./assets/CategoryDemo.gif" alt="sample of GET method for Category Route using Insomnia Core"/> </br>
+<img src="./assets/CategoryDemo.gif" alt="Sample of GET method for Category Route using Insomnia Core"/> </br>
 
 ## Credits
-  NPM packages Express.js, Sequelizize, MySQL2, and Insomnia Core was used to test routes. 
+  NPM packages Express.js, Sequelize, MySQL2, and Insomnia Core was used to test routes. 
 ## License 
   This project is covered by the license of: [MIT](https://opensource.org/licenses/MIT)
 ## Tests
