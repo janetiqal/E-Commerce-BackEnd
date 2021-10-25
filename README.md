@@ -8,6 +8,7 @@ I was given starter code and was asked to build a functional back end for an e-c
 - [Installation](#installation)
 - [User-Story](#user-story)
 - [Features](#features)
+- [Technologies](#technologies)
 - [Demo](#demo)
 - [Sample-GIF](#sample-gif)
 - [Credits](#credits)
@@ -27,7 +28,14 @@ I WANT a back end for my e-commerce website that uses the latest technologies
 SO THAT my company can compete with other e-commerce companies
 ```
 ## Features 
-  Connects to a MYSQL database with Sequelize, database syncs when server is turned on. RESTful APIs with CRUD operations for three routes--Product ,Tag  and Category. Data is returned in formatted JSON.
+  Connects to a MYSQL database with Sequelize, database syncs when server is turned on. RESTful APIs with CRUD operations for three routes--Product, Tag and Category. Data is returned in formatted JSON.
+
+## Technologies
+- Express.js 
+- Sequelize
+- Insomnia was used to test routes
+- MYSQL db
+
 ## Demo
   [Demo Video](https://drive.google.com/file/d/159qgTo5idf37QCPdawoTFo2DA643cfsn/view?usp=sharing) </br>
   [Demo Video Part Two](https://drive.google.com/file/d/1H_KQ0XdqAT6QMpRwfq9A3DYde8DDK-K8/view?usp=sharing)
