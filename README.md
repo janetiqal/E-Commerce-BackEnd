@@ -2,7 +2,7 @@
   
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg) </br>
 ## Description 
-I was given starter code and was asked to build a functional back end for an e-commerce site by using Express.js API to use Sequelize to interact with a MySQL database. The database consisted of four models and were built using the Sequelize model structure. Associations were created between tables using a through model. All routes were tested using Insomnia Core. 
+I built a functional back end for an e-commerce site by using Express.js API to use Sequelize to interact with a MySQL database. The database consisted of four models and were built using the Sequelize model structure. Associations were created between tables using a through model. All routes were tested using Insomnia Core. 
 
 ## Table of Contents
 - [Installation](#installation)
